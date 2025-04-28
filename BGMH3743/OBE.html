@@ -1,10 +1,137 @@
 
-				<!DOCTYPE html>
+				
 				<html>
 					<head>
-						<meta charset="UTF-8">
-						<meta name="viewport" content="width=device-width, initial-scale=1" />
-						<link rel="stylesheet" href="pluginAssets/jsdraw__markdownIt_editDrawingButton/markdownIt.css"><link rel="stylesheet" href="pluginAssets/highlight.js/atom-one-light.css">
+						<meta charset="UTF-8"/>
+						<meta name="viewport" content="width=device-width, initial-scale=1"/>
+						<style>.jsdraw--editButton {
+  display: none;
+  width: min-content;
+  max-height: 50px;
+  z-index: 1;
+  opacity: 0.9;
+  align-self: flex-end;
+  justify-self: right;
+}
+
+.jsdraw--svgWrapper {
+  display: inline-grid;
+}
+
+.jsdraw--svgWrapper > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.jsdraw--svgWrapper:hover .jsdraw--editButton,
+.jsdraw--svgWrapper:focus .jsdraw--editButton,
+.jsdraw--svgWrapper:focus-within .jsdraw--editButton,
+.jsdraw--editButton:focus {
+  display: block;
+}</style><style>pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+code.hljs {
+  padding: 3px 5px;
+}
+
+/*
+
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
+
+*/
+
+.hljs {
+  color: #383a42;
+  background: #fafafa;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #a0a1a7;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #a626a4;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string {
+  color: #50a14f;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
+}
+
+.hljs-built_in,
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: #c18401;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}</style>
 						<title>OBE</title>
 					</head>
 					<body>
@@ -486,7 +613,7 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 <li>emphasises the role of the learner.</li>
 <li>focuses on learning outcomes.</li>
 <li>continuous alignment and improvement.</li>
-<li>structured using Bloom's Taxonomy.</li>
+<li>structured using Bloom&apos;s Taxonomy.</li>
 </ul>
 <h2 id="why">Why</h2>
 <ul>
@@ -520,8 +647,7 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 <li>Analyse hydraulic circuit diagrams for hydraulic power systems. (C4)</li>
 <li>Select appropriate electrical control components to accomplish specified functions in a hydraulic power system. (C4)</li>
 </ol>
-<hr>
-<h1 id="blooms">Blooms</h1>
+<h2 id="blooms-taxonomy">Bloom&apos;s Taxonomy</h2>
 <p>3 learning domains</p>
 <ol>
 <li>affective</li>
@@ -529,13 +655,13 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 <li>psychomotor</li>
 </ol>
 <p>goes through levels 1 to 5 or 6. level 1 is easiest, level 5/6 is hardest.</p>
-<h1 id="programme-educational-objectives">Programme Educational Objectives</h1>
+<h2 id="programme-educational-objectives">Programme Educational Objectives</h2>
 <ol>
 <li>Graduates are competent in the practice of mechatronics engineering.</li>
 <li>Graduates are engaged in life-long learning and professional development.</li>
 <li>Graduates are committed to professionalism in engineering practice and contribute to society.</li>
 </ol>
-<h1 id="programme-outcomes-2">Programme Outcomes</h1>
+<h2 id="programme-outcomes-2">Programme Outcomes</h2>
 <p>PO1: Apply knowledge of mathematics, natural science, computing, Mechatronics engineering fundamentals and its specializations to develop solutions to complex engineering problems.</p>
 <p>PO2: Identify, formulate, research literature and analyse complex Mechatronics engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences and engineering sciences with holistic considerations for sustainable development.</p>
 <p>PO3: Design creative solutions for complex Mechatronics engineering problems and design systems, components or processes to meet identified needs with appropriate consideration for public safety and health, whole-life cost, net zero carbon as well as resource, cultural, societal, and environmental considerations as required.</p>
@@ -545,7 +671,7 @@ pre.mermaid[data-processed=true] { white-space: unset; }
 <p>PO7: Apply ethical principles and commit to professional ethics and norms of Mechatronics engineering practice and adhere to relevant national and international laws. Demonstrate an understanding of the need for diversity and inclusion.</p>
 <p>PO8: Function effectively as an individual, and as a member or leader in diverse and inclusive teams and in multidisciplinary, face-to-face, remote and distributed settings.</p>
 <p>PO9: Communicate effectively and inclusively on complex Mechatronics engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations, taking into account cultural, language, and learning differences.</p>
-<p>PO10: Apply knowledge and understanding of engineering management principles and economic decision-making to one’s own work, as a member and leader in a team, and to manage projects in multidisciplinary environments.</p>
+<p>PO10: Apply knowledge and understanding of engineering management principles and economic decision-making to one&rsquo;s own work, as a member and leader in a team, and to manage projects in multidisciplinary environments.</p>
 <p>PO11: Recognize the need for, and have the preparation and ability for independent and life-long learning, adaptability to new and emerging technologies and critical thinking in the broadest context of technological change.</p>
 </div></div>
 					</body>
